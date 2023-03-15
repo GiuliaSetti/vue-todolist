@@ -60,6 +60,10 @@ const { createApp } = Vue
         }
     },
 
+    removeTask(index){
+        this.todos.splice(index, 1);
+    }, 
+
   },
 
    
