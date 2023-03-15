@@ -6,7 +6,6 @@
 
 // MILESTONE 1
 // Stampare all'interno di una lista HTML un item per ogni todo.
-
 // Se la proprietà done è uguale a true, visualizzare il testo del todo sbarrato.
 
 // MILESTONE 2
@@ -43,8 +42,25 @@ const { createApp } = Vue
                 done: false,
             },
           ], 
+
       }
     },
+
+    
+    methods: {
+    doneTask(index){
+        if(this.todos[index].done){
+
+            this.todos[index].done = false;
+
+        } else{
+
+            this.todos[index].done = true;
+
+        }
+    },
+
+  },
 
    
 
