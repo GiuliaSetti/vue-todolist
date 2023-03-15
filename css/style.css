@@ -10,13 +10,90 @@
     font-family: 'Montserrat', sans-serif;
 }
 
-
-/* lista */
-
-ul{
-    list-style: circle;
+h1{
+    text-align: center;
 }
 
-li span:hover{
+button{    
     cursor: pointer;
+    padding: 10px 20px;
+
+    border: none;
+    border-radius: 30px;
+
+    font-size: 15px;
+    font-weight: bold;
+
+    background-color: #ead7c3;
+    color: white;
+}
+
+/* container */
+.container{
+    max-width: 800px;
+    margin: 2rem auto;
+}
+
+
+/* lista */
+.list_container{
+    padding: 2rem;
+
+    box-shadow: 1px 1px 10px black;
+
+    border: 1px rgba(0, 0, 0, 0.5) solid;
+    border-radius: 30px;
+    background-color: #fbf6ef;
+}
+
+
+li{
+    padding: 1rem 0;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+
+    border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+li span{
+    font-size: 20px;
+}
+
+li span i{
+    padding: 10px;
+    font-size: 15px;
+}
+
+li button{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+li:hover{
+    cursor: pointer;
+    color: gray;
+}
+
+button:hover{
+    color: gray;
+    background-color: #dce0d9;
+}
+
+/* add a task */
+
+.add_input{
+    text-align: center;
+}
+
+.add_input input{
+    padding: 10px 20px;
+    margin: 0 1rem;
+
+    border-radius: 30px;
+    border: gray 1px solid;
 }

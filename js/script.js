@@ -24,6 +24,7 @@ const { createApp } = Vue
     data() {
       return {
         title: "My ToDo List",
+        subtitle: "Add a new task",
         newTask: '',
         todos : [
             {

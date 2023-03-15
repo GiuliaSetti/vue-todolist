@@ -23,7 +23,7 @@
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 
         <main>
-            <div id="app">
+            <div id="app" class="container">
                 <!-- titolo -->
                 <h1>{{title}}</h1>
 
@@ -31,7 +31,7 @@
                 <div class="list_container">
                     <ul>
                         <li v-for="(todo, toDoIndex) in todos" >
-                            <span  @click=" doneTask(toDoIndex)" :style="todo.done == true ? {textDecoration: 'line-through'} : ''">{{todo.text}}</span>
+                            <span  @click=" doneTask(toDoIndex)" :style="todo.done == true ? {textDecoration: 'line-through'} : ''"><i class="fa-solid fa-circle"></i>{{todo.text}}</span>
                             <button @click="removeTask(toDoIndex)">
                                 <i class="fa-regular fa-square-minus"></i>Remove Task
                             </button>
@@ -43,6 +43,7 @@
 
                 <!-- container aggiungi elemento -->
                 <div class="add_input">
+                    <h2>{{subtitle}}</h2>
                     <input type="text" v-model="newTask" @keyup.enter="addTask()" >
                     <button @click="addTask()">Add</button>
                 </div>
