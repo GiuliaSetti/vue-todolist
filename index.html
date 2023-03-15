@@ -24,7 +24,10 @@
 
         <main>
             <div id="app">
+                <!-- titolo -->
                 <h1>{{title}}</h1>
+
+                <!-- container lista -->
                 <div class="list_container">
                     <ul>
                         <li v-for="(todo, toDoIndex) in todos" >
@@ -36,6 +39,12 @@
                             
                         </li>
                     </ul>
+                </div>
+
+                <!-- container aggiungi elemento -->
+                <div class="add_input">
+                    <input type="text" v-model="newTask" @keyup.enter="addTask()" >
+                    <button @click="addTask()">Add</button>
                 </div>
 
             </div>
